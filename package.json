@@ -1,0 +1,22 @@
+{
+  "author": "inc2734",
+  "license": "GPL-2.0+",
+  "dependencies": {
+    "sass-basis": "^8.0.5"
+  },
+  "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
+    "autoprefixer": "^8.3.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp",
+    "build": "gulp build"
+  }
+}

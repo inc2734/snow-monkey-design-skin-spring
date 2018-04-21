@@ -1,0 +1,37 @@
+sudo: false
+language: php
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+branches:
+  only:
+  - master
+  - develop
+  - "/\\d+\\.\\d+\\.\\d+?.*/"
+php:
+- 5.6
+- 7.1
+env:
+  global:
+  - GIT_COMMITTER_NAME=travis-ci
+  - GIT_COMMITTER_EMAIL=inc@2inc.org
+  - GIT_AUTHOR_NAME=travis-ci
+  - GIT_AUTHOR_EMAIL=inc@2inc.org
+  - WP_VERSION=latest WP_MULTISITE=0
+cache:
+  directories:
+  - node_modules
+  - vendor
+  - "$HOME/.composer/cache"
+install:
+- nvm install 6
+- npm install -g yarn
+- yarn install
+- npm rebuild node-sass
+- composer install
+script:
+- composer test
+after_success:
+- pwd
+- ls -al

@@ -2,11 +2,6 @@
 .sass-cache/
 npm-debug.log
 node_modules/
-assets/
 vendor/
-*.sql
-release/
-snow-monkey-bbpress-support.zip
 .travis/github_deploy_key
-.plugins
 yarn-error.log

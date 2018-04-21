@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package snow-monkey-design-skin-spring
+ * @author inc2734
+ * @license GPL-2.0+
+ */
+
 add_filter( 'theme_mod_accent-color', function( $option ) {
 	return '#ee85b5';
 } );
@@ -42,13 +48,3 @@ add_filter( 'theme_mod_page-eyecatch', function( $image ) {
 add_filter( 'snow_monkey_page_header_thumbnail_size', function( $size ) {
 	return 'full';
 } );
-
-/*
-add_action( 'wp', function() {
-	$cfs = \Inc2734\WP_Customizer_Framework\Customizer_Framework::styles();
-	$cfs->register(
-		'body',
-		'color: #fff !important'
-	);
-} );
-*/

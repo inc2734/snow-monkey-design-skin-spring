@@ -1,11 +1,25 @@
 <?php
 /**
- * Plugin name: Snow Monkey Design Skin Spring
- * Description: A design skin of the Snow Monkey
- * Version: 0.1.0
+ * Plugin name: [ Snow Monkey Design Skin ] Spring
+ * Description: A design skin of the Snow Monkey.
+ * Version: 0.2.0
+ * Text Domain: snow-monkey-design-skin-spring
+ * Domain Path: /languages/
+ *
+ * @package snow-monkey-design-skin-spring
+ * @author inc2734
+ * @license GPL-2.0+
  */
 
+use Inc2734\WP_GitHub_Plugin_Updater\GitHub_Plugin_Updater;
+
 add_action( 'plugins_loaded', function() {
+	load_plugin_textdomain( 'snow-monkey-design-skin-spring', false, basename( __DIR__ ) . '/languages' );
+
+	add_action( 'init', function() {
+		new GitHub_Plugin_Updater( plugin_basename( __FILE__ ), 'inc2734', 'snow-monkey-design-skin-spring' );
+	} );
+
 	add_filter( 'snow_monkey_design_skin_choices', function( $choices ) {
 		$plugin_data = get_file_data( __FILE__, [
 			'label' => 'Plugin Name',
