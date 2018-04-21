@@ -12,6 +12,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
+    "gulp-zip": "^4.1.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {

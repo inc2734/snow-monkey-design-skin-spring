@@ -7,6 +7,7 @@ var cssnano      = require('cssnano');
 var rename       = require('gulp-rename');
 var autoprefixer = require('autoprefixer');
 var rimraf       = require('rimraf');
+var zip          = require('gulp-zip');
 
 var dir = {
   src: {
@@ -45,6 +46,36 @@ function sassCompile(src, dest) {
  * Build
  */
 gulp.task('build', ['css']);
+
+/**
+ * Creates the zip file
+ * This command must be build beforehand on Travis CI !!
+ */
+gulp.task('zip', function(){
+  return gulp.src(
+      [
+        '**',
+        '!.git',
+        '!.git/**',
+        '!.editorconfig',
+        '!.gitignore',
+        '!.travis.yml',
+        '!codesniffer.ruleset.xml',
+        '!composer.json',
+        '!composer.lock',
+        '!gulpfile.js',
+        '!package.json',
+        '!phpcs.ruleset.xml',
+        '!phpmd.ruleset.xml',
+        '!yarn.lock',
+        '!node_modules',
+        '!node_modules/**'
+      ],
+      {base: './'}
+    )
+    .pipe(zip('snow-monkey-design-skin-spring.zip'))
+    .pipe(gulp.dest('./'));
+});
 
 /**
  * Auto build and browsersync
