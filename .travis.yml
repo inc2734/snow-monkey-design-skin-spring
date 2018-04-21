@@ -35,3 +35,12 @@ script:
 after_success:
 - pwd
 - ls -al
+deploy:
+  provider: releases
+  api_key:
+    secure: eUEho564r1IIM+oUr7+pXlEFK4h5U2TNvtcJE2pbCeeenP7ZAkVbBr6JXrZdikP70+8FyH5Zx58AzssC5nR15n1zDCVUHMleE6J1AZU2Hqux8IqH+yJwfndcCKK2GnsOA0zcl0ersr45fm753J5vel/oO2s6VkyBhYo/dEnBOoxm5W/hkfbUN1LlNsEYfPqb4BKXOIBQlYUJbTAw17vymAWpm66HZwH9BtRYd3UFG/ZXcyfO4QXL9A9q1YkmH2yF+5t0uaX1cW+fgmQAWrSjqVfou2lBC58IVv1S8NwNh5x+bAoypZaL2e+9lffl1nVuun9SBfcIIZsFrgl2ZBtkBtx/Hr8OJAi/jicbSIfdpLcwqMsJLHfE8aZynoPw4cnXekrn0i3mHIJ7/ACJE239gvS3alDduoUufJuz+RhPbhVRnJ0z10NZLWT1BmlDkrDB7bUWBFvb6aFtXvIFtavkyJQeeVOjKrxRukXLfX0Jcgg8M+8hU1Ac/RhiCrs8zqnIEuVFwiLVuiKvzl1MQTCe56YznVz3ypXT7Jo8uNBjAOFqB7mW7xQhES1UVMzT/pB5tYqSbfHgBFk21WXk+f3QRVZfw38KKjTbsLjF6dXX1ZViskyVtQDcqybgIES7+zXaYGiVLTQKklEzaotfWCxaN1DkouqdrZ+uw+ZiwrfwQwM=
+  file: ''
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: inc2734/snow-monkey-design-skin-spring
