@@ -2,7 +2,7 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Spring
  * Description: A design skin of the Snow Monkey.
- * Version: 0.2.0
+ * Version: 0.2.1
  * Text Domain: snow-monkey-design-skin-spring
  * Domain Path: /languages/
  *
@@ -12,6 +12,8 @@
  */
 
 use Inc2734\WP_GitHub_Plugin_Updater\GitHub_Plugin_Updater;
+
+require_once( __DIR__ . '/vendor/autoload.php' );
 
 add_action( 'plugins_loaded', function() {
 	load_plugin_textdomain( 'snow-monkey-design-skin-spring', false, basename( __DIR__ ) . '/languages' );
