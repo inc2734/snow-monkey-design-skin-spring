@@ -5,5 +5,5 @@ node_modules/
 vendor/
 .travis/github_deploy_key
 yarn-error.log
-release/
+snow-monkey-design-skin-spring/
 snow-monkey-design-skin-spring.zip

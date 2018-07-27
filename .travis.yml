@@ -25,10 +25,8 @@ cache:
   - vendor
   - "$HOME/.composer/cache"
 install:
-- nvm install 6
-- npm install -g yarn
-- yarn install
-- npm rebuild node-sass
+- nvm install 8
+- npm install
 - composer install
 script:
 - composer test
@@ -36,11 +34,7 @@ after_success:
 - pwd
 - ls -al
 before_deploy:
-- rsync -a . release
-- cd release
-- rm -rf vendor
-- composer install --no-dev
-- yarn run gulp zip
+- npm run zip
 - ls -la snow-monkey-design-skin-spring.zip
 - export RELEASE_FILE=$(ls snow-monkey-design-skin-spring.zip)
 deploy:
