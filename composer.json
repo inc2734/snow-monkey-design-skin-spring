@@ -22,7 +22,8 @@
     "test": [
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
       "vendor/bin/phpcs -p -s -v -n . --standard=./phpcs.ruleset.xml --extensions=php"
-    ]
+    ],
+    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php"
   },
   "autoload": {
     "psr-4": {
