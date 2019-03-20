@@ -2,7 +2,7 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Spring
  * Description: A design skin of the Snow Monkey.
- * Version: 0.2.2
+ * Version: 0.2.3
  * Text Domain: snow-monkey-design-skin-spring
  * Domain Path: /languages/
  *
