@@ -12,18 +12,20 @@
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
     "phpmd/phpmd": "2.*",
-    "pdepend/pdepend": "2.5.0"
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/wp-github-plugin-updater": ">=0.1.1"
+    "inc2734/wp-github-plugin-updater": ">=2.0.0"
   },
   "scripts" :{
     "test": [
-      "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-      "vendor/bin/phpcs -p -s -v -n . --standard=./phpcs.ruleset.xml --extensions=php"
+      "vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp,vendor/wp-coding-standards/wpcs",
+      "vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
+      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/"
     ],
-    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php"
+    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php"
   },
   "autoload": {
     "psr-4": {

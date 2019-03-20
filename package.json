@@ -20,6 +20,6 @@
     "css:postcss": "postcss ./*.css -r --no-map -c=postcss.config.js",
     "css": "npm-run-all -s css:sass css:postcss minify:css",
     "build": "npm run css",
-    "zip": "rimraf snow-monkey-design-skin-spring.zip && rsync -a --exclude '.*' --exclude '/snow-monkey-design-skin-spring/' --exclude '/vendor/' --exclude '/node_modules/' --exclude '*.ruleset.xml' --exclude 'package*.json' --exclude '*.config.js' ./ snow-monkey-design-skin-spring && cd snow-monkey-design-skin-spring && composer install --no-dev && cd ../ && zip -9 -qmr snow-monkey-design-skin-spring.zip snow-monkey-design-skin-spring -x 'snow-monkey-design-skin-spring/composer.*'"
+    "zip": "rimraf snow-monkey-design-skin-spring.zip && rsync -a --exclude '.*' --exclude '/snow-monkey-design-skin-spring/' --exclude '/vendor/' --exclude '/node_modules/' --exclude '*.ruleset.xml' --exclude '*.xml.dist' --exclude 'package*.json' --exclude '*.config.js' ./ snow-monkey-design-skin-spring && cd snow-monkey-design-skin-spring && composer install --no-dev && cd ../ && zip -9 -qmr snow-monkey-design-skin-spring.zip snow-monkey-design-skin-spring -x 'snow-monkey-design-skin-spring/composer.*'"
   }
 }
