@@ -20,7 +20,7 @@ add_filter(
 );
 
 add_filter(
-	'theme_mod_page-layout',
+	'theme_mod_singular-post-layout',
 	function( $option ) {
 		return 'right-sidebar';
 	}

@@ -2,24 +2,29 @@
   "author": "inc2734",
   "license": "GPL-2.0+",
   "dependencies": {
-    "sass-basis": "^8.0.5"
+    "sass-basis": "^9.5.4"
   },
   "devDependencies": {
-    "@alrra/travis-scripts": "^3.0.1",
-    "autoprefixer": "^8.6.5",
-    "cssnano-cli": "^1.0.5",
-    "node-sass": "^4.9.1",
-    "npm-run-all": "^4.1.3",
-    "postcss-cli": "^5.0.1",
-    "rimraf": "^2.6.2"
+    "autoprefixer": "^9.6.5",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "rimraf": "^3.0.0"
   },
   "scripts": {
+    "clean:zip": "rimraf snow-monkey-design-skin-spring.zip",
     "start": "npm run build",
-    "minify:css": "find ./ -name '*.css' -maxdepth 1 | xargs -I{} cssnano {} {} --no-zindex",
-    "css:sass": "node-sass src/css -o ./",
-    "css:postcss": "postcss ./*.css -r --no-map -c=postcss.config.js",
-    "css": "npm-run-all -s css:sass css:postcss minify:css",
+    "css:app:sass": "node-sass src/css/design-skin.scss -o .",
+    "css:app:postcss": "postcss ./design-skin.css -o ./design-skin.css -c=postcss.config.js",
+    "css:app": "npm-run-all -s css:app:*",
+    "css:editor:sass": "node-sass src/css/editor-style.scss -o .",
+    "css:editor:postcss": "postcss ./editor-style.css -o ./editor-style.css -c=postcss.config.js",
+    "css:editor": "npm-run-all -s css:editor:*",
+    "css": "npm-run-all -p css:*",
     "build": "npm run css",
-    "zip": "rimraf snow-monkey-design-skin-spring.zip && rsync -a --exclude '.*' --exclude '/snow-monkey-design-skin-spring/' --exclude '/vendor/' --exclude '/node_modules/' --exclude '*.ruleset.xml' --exclude '*.xml.dist' --exclude 'package*.json' --exclude '*.config.js' ./ snow-monkey-design-skin-spring && cd snow-monkey-design-skin-spring && composer install --no-dev && cd ../ && zip -9 -qmr snow-monkey-design-skin-spring.zip snow-monkey-design-skin-spring -x 'snow-monkey-design-skin-spring/composer.*'"
+    "zip:pack": "rsync -a --exclude='/vendor' --exclude='/node_modules' --exclude='.*' --exclude='*.config.js' --exclude='*.xml.dist' --exclude='*.ruleset.xml' --exclude='/bin' --exclude='/tests' --exclude='package*.json' . snow-monkey-design-skin-spring && cd snow-monkey-design-skin-spring && composer install --no-dev",
+    "zip:archive": "zip -9 -qmr snow-monkey-design-skin-spring.zip snow-monkey-design-skin-spring",
+    "zip": "npm run clean:zip && npm run zip:pack && npm run zip:archive"
   }
 }
