@@ -28,10 +28,10 @@ add_action(
 			'init',
 			function() {
 				new Updater(
-				plugin_basename( __FILE__ ),
-				'inc2734', // GitHub user name
-				'snow-monkey-design-skin-spring' // GitHub repository name
-			);
+					plugin_basename( __FILE__ ),
+					'inc2734', // GitHub user name
+					'snow-monkey-design-skin-spring' // GitHub repository name
+				);
 			}
 		);
 
