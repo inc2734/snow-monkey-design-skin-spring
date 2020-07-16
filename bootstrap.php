@@ -48,9 +48,9 @@ add_filter(
 );
 
 add_filter(
-	'theme_mod_header-position-only-mobile',
+	'theme_mod_header-position-lg',
 	function( $option ) {
-		return false;
+		return 'overlay';
 	}
 );
 
@@ -78,6 +78,27 @@ add_filter(
 add_filter(
 	'snow_monkey_page_header_thumbnail_size',
 	function( $size ) {
-		return 'full';
+		return 'xlarge';
+	}
+);
+
+add_filter(
+	'theme_mod_infobar-content',
+	function( $content ) {
+		return false;
+	}
+);
+
+add_filter(
+	'theme_mod_header-content',
+	function( $content ) {
+		return false;
+	}
+);
+
+add_filter(
+	'theme_mod_display-header-content-on-mobile',
+	function( $display ) {
+		return false;
 	}
 );

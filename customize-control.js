@@ -20,8 +20,8 @@
     api.control('header-position').container.remove();
     api.control.remove('header-position');
 
-    api.control('header-position-only-mobile').container.remove();
-    api.control.remove('header-position-only-mobile');
+    api.control('header-position-lg').container.remove();
+    api.control.remove('header-position-lg');
 
     api.control('default-page-header-image').container.remove();
     api.control.remove('default-page-header-image');
@@ -31,5 +31,13 @@
 
     api.control('page-eyecatch').container.remove();
     api.control.remove('page-eyecatch');
+
+    api.section.remove('infobar');
+
+    api.control('header-content').container.remove();
+    api.control.remove('header-content');
+
+    api.control('display-header-content-on-mobile').container.remove();
+    api.control.remove('display-header-content-on-mobile');
   });
 })(jQuery);
