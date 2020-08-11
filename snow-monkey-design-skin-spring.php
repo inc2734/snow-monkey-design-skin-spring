@@ -3,6 +3,9 @@
  * Plugin name: [ Snow Monkey Design Skin ] Spring
  * Description: A design skin of the Snow Monkey.
  * Version: 2.0.0
+ * Tested up to: 5.5
+ * Requires at least: 5.5
+ * Requires PHP: 5.6
  * Text Domain: snow-monkey-design-skin-spring
  * Domain Path: /languages/
  *
@@ -30,7 +33,10 @@ add_action(
 				new Updater(
 					plugin_basename( __FILE__ ),
 					'inc2734', // GitHub user name
-					'snow-monkey-design-skin-spring' // GitHub repository name
+					'snow-monkey-design-skin-spring', // GitHub repository name
+					[
+						'homepage' => 'https://snow-monkey.2inc.org',
+					]
 				);
 			}
 		);
