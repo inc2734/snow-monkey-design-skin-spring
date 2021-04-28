@@ -7,98 +7,98 @@
 
 add_filter(
 	'theme_mod_accent-color',
-	function( $option ) {
+	function() {
 		return '#ee85b5';
 	}
 );
 
 add_filter(
 	'theme_mod_archive-page-layout',
-	function( $option ) {
+	function() {
 		return 'right-sidebar';
 	}
 );
 
 add_filter(
 	'theme_mod_singular-post-layout',
-	function( $option ) {
+	function() {
 		return 'right-sidebar';
 	}
 );
 
 add_filter(
 	'theme_mod_header-layout',
-	function( $option ) {
+	function() {
 		return '1row';
 	}
 );
 
 add_filter(
 	'theme_mod_breadcrumbs-position',
-	function( $option ) {
+	function() {
 		return 'content-width';
 	}
 );
 
 add_filter(
 	'theme_mod_header-position',
-	function( $option ) {
+	function() {
 		return 'overlay';
 	}
 );
 
 add_filter(
 	'theme_mod_header-position-lg',
-	function( $option ) {
+	function() {
 		return 'overlay';
 	}
 );
 
 add_filter(
 	'theme_mod_default-page-header-image',
-	function( $image ) {
+	function() {
 		return plugins_url( 'img/pink-1326168_1920.jpg', __FILE__ );
 	}
 );
 
 add_filter(
 	'theme_mod_post-eyecatch',
-	function( $image ) {
+	function() {
 		return 'page-header';
 	}
 );
 
 add_filter(
 	'theme_mod_page-eyecatch',
-	function( $image ) {
+	function() {
 		return 'page-header';
 	}
 );
 
 add_filter(
 	'snow_monkey_page_header_thumbnail_size',
-	function( $size ) {
+	function() {
 		return 'xlarge';
 	}
 );
 
 add_filter(
 	'theme_mod_infobar-content',
-	function( $content ) {
+	function() {
 		return false;
 	}
 );
 
 add_filter(
 	'theme_mod_header-content',
-	function( $content ) {
+	function() {
 		return false;
 	}
 );
 
 add_filter(
 	'theme_mod_display-header-content-on-mobile',
-	function( $display ) {
+	function() {
 		return false;
 	}
 );
