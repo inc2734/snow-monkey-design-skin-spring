@@ -8,8 +8,8 @@
     api.control('archive-post-layout').container.remove();
     api.control.remove('archive-post-layout');
 
-    api.control('singular-post-layout').container.remove();
-    api.control.remove('singular-post-layout');
+    api.control('post-layout').container.remove();
+    api.control.remove('post-layout');
 
     api.control('header-layout').container.remove();
     api.control.remove('header-layout');
