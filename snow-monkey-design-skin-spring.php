@@ -2,8 +2,8 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Spring
  * Description: A design skin of the Snow Monkey.
- * Version: 3.0.0
- * Tested up to: 5.7
+ * Version: 3.0.1
+ * Tested up to: 5.9
  * Requires at least: 5.5
  * Requires PHP: 5.6
  * Text Domain: snow-monkey-design-skin-spring
