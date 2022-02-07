@@ -13,7 +13,7 @@ add_filter(
 );
 
 add_filter(
-	'theme_mod_archive-page-layout',
+	'theme_mod_archive-post-layout',
 	function() {
 		return 'right-sidebar';
 	}

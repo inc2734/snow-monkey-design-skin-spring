@@ -5,8 +5,8 @@
     api.control('accent-color').container.remove();
     api.control.remove('accent-color');
 
-    api.control('archive-page-layout').container.remove();
-    api.control.remove('archive-page-layout');
+    api.control('archive-post-layout').container.remove();
+    api.control.remove('archive-post-layout');
 
     api.control('singular-post-layout').container.remove();
     api.control.remove('singular-post-layout');
