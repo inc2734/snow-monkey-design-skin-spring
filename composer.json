@@ -9,11 +9,11 @@
     }
   ],
   "require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-		"squizlabs/php_codesniffer": "^3.5",
-		"phpcompatibility/php-compatibility": "^9.3",
-		"wp-coding-standards/wpcs": "^2.3",
-		"sirbrillig/phpcs-variable-analysis": "^2.10"
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "squizlabs/php_codesniffer": "^3.6",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "wp-coding-standards/wpcs": "^2.3",
+    "sirbrillig/phpcs-variable-analysis": "^2.11"
   },
   "require": {
     "php": ">=5.6",
@@ -26,6 +26,11 @@
   "autoload": {
     "psr-4": {
       "Snow_Monkey\\Plugin\\DesignSkinSpring\\": ""
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   }
 }
