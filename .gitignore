@@ -8,4 +8,5 @@ yarn-error.log
 snow-monkey-design-skin-spring/
 snow-monkey-design-skin-spring.zip
 .wp-env.override.json
+.wp-env.tests.override.json
 /.export/*
